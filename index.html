@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CVR Propiedades - Valuación de Inmuebles</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        header {
+            background-color: #0F244F;
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #C8A14A;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #C8A14A;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #0F244F 0%, #1a3a6b 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #C8A14A;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #C8A14A;
+            color: #0F244F;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .btn:hover {
+            background-color: #a88236;
+        }
+        
+        .cta-section {
+            background-color: #F4F1EA;
+            padding: 3rem 0;
+            margin: 3rem 0;
+        }
+        
+        .cta-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .cta-text h2 {
+            color: #0F244F;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-text p {
+            color: #333;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+        
+        .cta-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-left: 4px solid #C8A14A;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #0F244F;
+            font-weight: bold;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #C8A14A;
+            box-shadow: 0 0 0 3px rgba(200, 161, 74, 0.1);
+        }
+        
+        footer {
+            background-color: #0F244F;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .cta-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            nav a {
+                margin-left: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">CVR Propiedades</div>
+            <nav>
+                <a href="#valuador">Valuador</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <h1>Valuación de Propiedades en Línea</h1>
+            <p>Obtén una valoración instantánea de tu inmueble</p>
+            <a href="#valuador" class="btn">Valuar Ahora</a>
+        </div>
+    </section>
+    
+    <section class="cta-section" id="valuador">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-text">
+                    <h2>Conoce el Valor de tu Propiedad</h2>
+                    <p>Nuestro valuador freemium te permite obtener una estimación rápida y precisa del valor de tu propiedad. Para una valuación completa y detallada, accede a nuestro plan premium.</p>
+                    <p>Características:</p>
+                    <ul style="margin-left: 1.5rem;">
+                        <li>Valuación simple gratuita</li>
+                        <li>Valuación premium detallada</li>
+                        <li>Reportes profesionales</li>
+                        <li>Análisis de mercado</li>
+                    </ul>
+                </div>
+                
+                <form name="valuacion-premium" method="POST" netlify class="cta-form">
+                    <h3 style="color: #0F244F; margin-bottom: 1.5rem;">Solicita tu Valuación Premium</h3>
+                    
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="direccion">Dirección del Inmueble</label>
+                        <input type="text" id="direccion" name="direccion" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tipo">Tipo de Propiedad</label>
+                        <select name="tipo" id="tipo" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-family: inherit; font-size: 1rem;" required>
+                            <option value="">Selecciona una opción</option>
+                            <option value="apartamento">Apartamento</option>
+                            <option value="casa">Casa</option>
+                            <option value="oficina">Oficina</option>
+                            <option value="local">Local Comercial</option>
+                            <option value="terreno">Terreno</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mensaje">Información Adicional</label>
+                        <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos más sobre tu propiedad..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn" style="width: 100%; cursor: pointer;">Solicitar Valuación Premium</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 CVR Propiedades. Todos los derechos reservados.</p>
+            <p><a href="/valuador.html" style="color: #C8A14A; text-decoration: none;">Valuador Freemium</a></p>
+        </div>
+    </footer>
+</body>
+</html>
