@@ -1,0 +1,45 @@
+# ============================================================
+# CVR Propiedades — Configuración Netlify
+# Dominio: cvrpropiedades.cl
+# ============================================================
+
+[build]
+  publish = "."
+
+# ---- Redirects ----
+
+# Redirigir www → sin www (canonical)
+[[redirects]]
+  from   = "https://www.cvrpropiedades.cl/*"
+  to     = "https://cvrpropiedades.cl/:splat"
+  status = 301
+  force  = true
+
+# Página 404 personalizada
+[[redirects]]
+  from   = "/*"
+  to     = "/404.html"
+  status = 404
+
+# ---- Headers de seguridad y rendimiento ----
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options        = "DENY"
+    X-XSS-Protection       = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy        = "strict-origin-when-cross-origin"
+    Permissions-Policy     = "camera=(), microphone=(), geolocation=()"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; frame-src https://www.google.com; connect-src 'self' https://formspree.io;"
+
+# Cache largo para assets estáticos
+[[headers]]
+  for = "/style.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
