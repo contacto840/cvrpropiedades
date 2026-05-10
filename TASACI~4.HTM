@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- SEO: Títulos y Descripciones Optimizadas -->
+  <title>Tasación Gratis Ñuble 2026 | Calculadora Online para Propiedades en Chillán</title>
+  <meta name="description" content="Tasación referencial gratis de tu propiedad en Ñuble. Calculadora online instantánea para Chillán, Ñuble, Quirihue. Resultado en UF y CLP + informe PDF. CVR Consultoría Técnica." />
+  <meta name="keywords" content="tasación gratis, tasación online Ñuble, calculadora propiedad Chillán, valor metro cuadrado Ñuble, tasación referencial, valuación propiedad" />
+  <meta name="author" content="CVR Consultoría Técnica Predial" />
+  <meta name="robots" content="index, follow" />
+  <!-- Open Graph / Redes Sociales -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Tasación Gratis Ñuble 2026 | Calculadora Online para Propiedades" />
+  <meta property="og:description" content="Obtén en 3 pasos una tasación referencial gratis de tu propiedad en Ñuble. Resultado instantáneo en UF y CLP con informe PDF." />
+  <meta property="og:url" content="https://cvrpropiedades.cl/tasacion-gratis.html" />
+  <meta property="og:image" content="https://cvrpropiedades.cl/assets/og-tasacion-gratis.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <!-- Canonical + Structured Data -->
+  <link rel="canonical" href="https://cvrpropiedades.cl/tasacion-gratis.html" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- JSON-LD Schema para Google (Rich Snippet) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Tool",
+    "name": "Tasación Gratis Ñuble",
+    "description": "Herramienta de tasación referencial online para propiedades en Ñuble, Chile",
+    "url": "https://cvrpropiedades.cl/tasacion-gratis.html",
+    "creator": {
+      "@type": "Organization",
+      "name": "CVR Consultoría Técnica Predial",
+      "url": "https://cvrpropiedades.cl",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "telephone": "+56-938689157"
+      }
+    },
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "Ñuble",
+      "url": "https://es.wikipedia.org/wiki/Región_del_Ñuble"
+    }
+  }
+  </script>
+  <style>
+    /* ========================================
+       ESTILOS ESPECÍFICOS: Tasación Gratis
+       ======================================== */
+
+    .page-tasacion {
+      background: var(--cream);
+    }
+
+    /* Hero compacto para tasación */
+    .hero-tasacion {
+      min-height: 50vh;
+      background: linear-gradient(135deg, var(--navy) 0%, #0d1e33 60%, #1a2e4a 100%);
+      display: flex;
+      align-items: center;
+      padding-top: 64px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-tasacion::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      right: -10%;
+      width: 60vw;
+      height: 60vw;
+      border: 1px solid rgba(201,168,76,0.08);
+      border-radius: 50%;
+    }
+    .hero-tasacion__content {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      padding: 2rem 0;
+      text-align: center;
+    }
+    .hero-tasacion h1 {
+      color: var(--white);
+      margin-bottom: 1rem;
+      font-size: clamp(2rem, 5vw, 2.8rem);
+    }
+    .hero-tasacion h1 em {
+      font-style: normal;
+      color: var(--gold);
+    }
+    .hero-tasacion__desc {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.8);
+      max-width: 680px;
+      margin: 0 auto 1rem;
+      line-height: 1.6;
+    }
+    .hero-tasacion__badge {
+      display: inline-block;
+      background: rgba(201,168,76,0.15);
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 0.5rem 1.2rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Contenedor del formulario */
+    .tasacion-container {
+      max-width: 700px;
+      margin: -60px auto 0;
+      padding: 0 1.25rem;
+      position: relative;
+      z-index: 10;
+    }
+    .tasacion-form {
+      background: var(--white);
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(26,46,74,0.15);
+      padding: 2.5rem;
+      overflow: hidden;
+    }
+
+    /* Indicador de progreso */
+    .form-progress {
+      display: flex;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+      justify-content: center;
+    }
+    .progress-dot {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--cream);
+      border: 2px solid var(--gray-lt);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: var(--gray);
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+    }
+    .progress-dot.active {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--navy);
+      transform: scale(1.1);
+    }
+    .progress-dot.completed {
+      background: #4caf50;
+      border-color: #4caf50;
+      color: white;
+    }
+
+    /* Pasos del formulario */
+    .form-step {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .form-step.active {
+      display: block;
+      opacity: 1;
+    }
+    .form-step h3 {
+      color: var(--navy);
+      margin-bottom: 1.5rem;
+      font-size: 1.4rem;
+    }
+    .form-step__desc {
+      color: var(--gray);
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    /* Campos del formulario */
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border: 1px solid var(--gray-lt);
+      border-radius: 6px;
+      font-size: 0.95rem;
+      font-family: inherit;
+      transition: all 0.2s ease;
+      background: var(--cream);
+    }
+    .form-group input:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--gold);
+      background: var(--white);
+      box-shadow: 0 0 0 3px rgba(201,168,76,0.1);
+    }
+
+    /* Campos de rango con dos inputs */
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    @media (max-width: 640px) {
+      .form-row { grid-template-columns: 1fr; }
+    }
+
+    /* Radios personalizados */
+    .form-radio-group {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+    .form-radio-wrapper {
+      flex: 1;
+      min-width: 150px;
+    }
+    .form-radio-wrapper input[type="radio"] {
+      display: none;
+    }
+    .form-radio-wrapper label {
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+      border: 2px solid var(--gray-lt);
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      margin-bottom: 0;
+      font-weight: 500;
+    }
+    .form-radio-wrapper input[type="radio"]:checked + label {
+      border-color: var(--gold);
+      background: rgba(201,168,76,0.08);
+      color: var(--navy);
+    }
+
+    /* Controles del formulario */
+    .form-controls {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+      justify-content: space-between;
+    }
+    .btn-form {
+      padding: 0.85rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      flex: 1;
+    }
+    .btn-form-prev {
+      background: var(--cream);
+      color: var(--navy);
+      border: 1px solid var(--gray-lt);
+    }
+    .btn-form-prev:hover {
+      background: var(--gray-lt);
+    }
+    .btn-form-next {
+      background: var(--gold);
+      color: var(--navy);
+    }
+    .btn-form-next:hover {
+      background: var(--gold-lt);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(201,168,76,0.3);
+    }
+    .btn-form-next:disabled {
+      background: var(--gray-lt);
+      color: var(--gray);
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    /* Resultado de tasación */
+    .tasacion-result {
+      display: none;
+      text-align: center;
+    }
+    .tasacion-result.show {
+      display: block;
+      animation: slideIn 0.4s ease;
+    }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .result-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      animation: pop 0.4s ease;
+    }
+    @keyframes pop {
+      0% { transform: scale(0); }
+      70% { transform: scale(1.15); }
+      100% { transform: scale(1); }
+    }
+    .result-title {
+      font-size: 1.5rem;
+      color: var(--navy);
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    .result-subtitle {
+      color: var(--gray);
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    /* Box de rango de precio */
+    .price-range-box {
+      background: linear-gradient(135deg, rgba(201,168,76,0.08) 0%, rgba(201,168,76,0.04) 100%);
+      border: 2px solid var(--gold);
+      border-radius: 8px;
+      padding: 2rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+    .price-label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+    .price-value {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 0;
+    }
+    .price-range {
+      font-size: 0.95rem;
+      color: var(--gray);
+      margin-top: 0.5rem;
+    }
+
+    /* Disclaimer */
+    .result-disclaimer {
+      background: var(--cream);
+      border-left: 4px solid var(--gold);
+      padding: 1.25rem;
+      border-radius: 4px;
+      margin: 1.5rem 0;
+      font-size: 0.9rem;
+      color: var(--gray);
+      text-align: left;
+      line-height: 1.6;
+    }
+    .result-disclaimer strong {
+      color: var(--navy);
+    }
+
+    /* Botones finales */
+    .result-actions {
+      display: flex;
+      gap: 1rem;
+      flex-direction: column;
+      margin-top: 2rem;
+    }
+    .result-actions a,
+    .result-actions button {
+      padding: 1rem;
+      border: none;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+    }
+    .btn-download {
+      background: var(--navy);
+      color: var(--white);
+    }
+    .btn-download:hover {
+      background: var(--navy-mid);
+      transform: translateY(-2px);
+    }
+    .btn-consultar {
+      background: #25d366;
+      color: white;
+    }
+    .btn-consultar:hover {
+      background: #1eba58;
+      transform: translateY(-2px);
+    }
+
+    /* Botón flotante WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 60px;
+      height: 60px;
+      background: #25d366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(37,211,102,0.4);
+      z-index: 9999;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+    .whatsapp-float:hover {
+      background: #1eba58;
+      transform: scale(1.1);
+      box-shadow: 0 6px 24px rgba(37,211,102,0.5);
+    }
+    .whatsapp-float svg {
+      width: 32px;
+      height: 32px;
+      fill: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .tasacion-form {
+        padding: 1.75rem;
+      }
+      .price-value {
+        font-size: 1.8rem;
+      }
+      .form-controls {
+        flex-direction: column;
+      }
+      .btn-form {
+        flex: 1;
+      }
+      .result-actions {
+        flex-direction: column;
+      }
+      .whatsapp-float {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        width: 56px;
+        height: 56px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .whatsapp-float {
+        bottom: 80px;
+        right: 15px;
+        width: 56px;
+        height: 56px;
+      }
+      .whatsapp-float svg {
+        width: 28px;
+        height: 28px;
+      }
+    }
+  </style>
+</head>
+<body class="page-tasacion">
+
+<!-- NAVEGACIÓN -->
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      CVR Consultoría
+      <span>Técnica Predial</span>
+    </a>
+    <button class="nav__toggle" id="navToggle" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="due-diligence.html">Due Diligence</a></li>
+      <li><a href="estudio-titulos.html">Títulos</a></li>
+      <li><a href="tasacion-comercial.html">Tasaciones</a></li>
+      <li><a href="tasacion-gratis.html" class="active">Tasación Gratis</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="https://wa.me/56938689157?text=Hola%20Carlos,%20vengo%20de%20tasación%20gratis%20y%20quiero%20validar%20mi%20resultado." class="nav__cta" target="_blank" rel="noopener">WhatsApp</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-tasacion">
+  <div class="container">
+    <div class="hero-tasacion__content">
+      <div class="hero-tasacion__badge">⚡ Valorización Algorítmica Referencial</div>
+      <h1>Tasación <em>instantánea</em> de su propiedad</h1>
+      <p class="hero-tasacion__desc">
+        Obtenga un rango de valor referencial basado en datos de mercado de la Región de Ñuble. Completa nuestro formulario interactivo en 3 pasos y reciba su informe inmediatamente.
+      </p>
+      <p style="font-size: 0.9rem; color: rgba(255,255,255,0.7);">Válido para propiedades urbanas y rurales en Ñuble • Resultado PDF por email</p>
+    </div>
+  </div>
+</section>
+
+<!-- FORMULARIO -->
+<section style="padding: 4rem 0; background: var(--cream);">
+  <div class="tasacion-container">
+    <div class="tasacion-form" id="tasacionForm">
+
+      <!-- INDICADOR DE PROGRESO -->
+      <div class="form-progress" id="formProgress">
+        <div class="progress-dot active" data-step="1">1</div>
+        <div class="progress-dot" data-step="2">2</div>
+        <div class="progress-dot" data-step="3">3</div>
+      </div>
+
+      <form id="mainForm">
+
+        <!-- PASO 1: DATOS TÉCNICOS -->
+        <div class="form-step active" data-step="1">
+          <h3>📏 Datos de la Propiedad</h3>
+          <p class="form-step__desc">Información técnica del inmueble para calcular su valorización de mercado.</p>
+
+          <div class="form-group">
+            <label>Ubicación (Comuna/Sector)</label>
+            <select name="ubicacion" required>
+              <option value="">Selecciona tu ubicación...</option>
+              <option value="Chillán">Chillán</option>
+              <option value="Chillán Viejo">Chillán Viejo</option>
+              <option value="San Ignacio">San Ignacio</option>
+              <option value="Quirihue">Quirihue</option>
+              <option value="Ninhue">Ninhue</option>
+              <option value="San Fabián">San Fabián</option>
+              <option value="Cobquecura">Cobquecura</option>
+              <option value="Otra">Otra zona de Ñuble</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Tipo de Propiedad</label>
+            <div class="form-radio-group">
+              <div class="form-radio-wrapper">
+                <input type="radio" id="urbana" name="tipo" value="urbana" required />
+                <label for="urbana">🏢 Urbana</label>
+              </div>
+              <div class="form-radio-wrapper">
+                <input type="radio" id="rural" name="tipo" value="rural" />
+                <label for="rural">🌾 Rural</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>m² de Terreno</label>
+              <input type="number" name="metrosTierra" placeholder="Ej: 500" min="1" required />
+            </div>
+            <div class="form-group">
+              <label>m² Construidos</label>
+              <input type="number" name="metrosConstruidos" placeholder="Ej: 150" min="0" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Dormitorios</label>
+              <input type="number" name="dormitorios" placeholder="Ej: 3" min="0" max="20" />
+            </div>
+            <div class="form-group">
+              <label>Baños</label>
+              <input type="number" name="banos" placeholder="Ej: 2" min="0" max="10" />
+            </div>
+          </div>
+
+          <div class="form-controls">
+            <button type="button" class="btn-form btn-form-prev" style="display:none;">← Anterior</button>
+            <button type="button" class="btn-form btn-form-next" onclick="nextStep(1)">Siguiente →</button>
+          </div>
+        </div>
+
+        <!-- PASO 2: DATOS JURÍDICOS -->
+        <div class="form-step" data-step="2">
+          <h3>⚖️ Aspectos Jurídicos</h3>
+          <p class="form-step__desc">Información legal que impacta el valor y la operabilidad de la propiedad.</p>
+
+          <div class="form-group">
+            <label>¿La propiedad tiene derechos de agua inscritos?</label>
+            <div class="form-radio-group">
+              <div class="form-radio-wrapper">
+                <input type="radio" id="agua_si" name="derechosAgua" value="si" required />
+                <label for="agua_si">✓ Sí, regularizados</label>
+              </div>
+              <div class="form-radio-wrapper">
+                <input type="radio" id="agua_no" name="derechosAgua" value="no" />
+                <label for="agua_no">✗ No tiene</label>
+              </div>
+              <div class="form-radio-wrapper">
+                <input type="radio" id="agua_pendiente" name="derechosAgua" value="pendiente" />
+                <label for="agua_pendiente">? Sin formalizar</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Estado de Regularización</label>
+            <div class="form-radio-group">
+              <div class="form-radio-wrapper">
+                <input type="radio" id="regularizado" name="regularizacion" value="regularizado" required />
+                <label for="regularizado">✓ Regularizado</label>
+              </div>
+              <div class="form-radio-wrapper">
+                <input type="radio" id="pendiente_reg" name="regularizacion" value="pendiente" />
+                <label for="pendiente_reg">⚠ Pendiente</label>
+              </div>
+              <div class="form-radio-wrapper">
+                <input type="radio" id="litigioso" name="regularizacion" value="litigioso" />
+                <label for="litigioso">⛔ En disputa</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-controls">
+            <button type="button" class="btn-form btn-form-prev" onclick="prevStep(2)">← Anterior</button>
+            <button type="button" class="btn-form btn-form-next" onclick="nextStep(2)">Siguiente →</button>
+          </div>
+        </div>
+
+        <!-- PASO 3: DATOS DE CONTACTO -->
+        <div class="form-step" data-step="3">
+          <h3>📧 Tu Información</h3>
+          <p class="form-step__desc">Para enviar tu informe de tasación y que nuestro equipo pueda validar el resultado.</p>
+
+          <div class="form-group">
+            <label>Nombre completo</label>
+            <input type="text" name="nombre" placeholder="Carlos Venegas" required />
+          </div>
+
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="tu@email.com" required />
+          </div>
+
+          <div class="form-group">
+            <label>WhatsApp (con código país)</label>
+            <input type="tel" name="whatsapp" placeholder="+56 9 3868 9157" required />
+          </div>
+
+          <div class="form-controls">
+            <button type="button" class="btn-form btn-form-prev" onclick="prevStep(3)">← Anterior</button>
+            <button type="button" class="btn-form btn-form-next" onclick="calcularTasacion()">Calcular Tasación</button>
+          </div>
+        </div>
+
+      </form>
+
+      <!-- RESULTADO -->
+      <div class="tasacion-result" id="tasacionResult">
+        <div class="result-icon">✓</div>
+        <h2 class="result-title">Tasación Calculada</h2>
+        <p class="result-subtitle">Valorización técnica referencial de tu propiedad</p>
+
+        <div class="price-range-box">
+          <div class="price-label">Rango de Valor Estimado (UF)</div>
+          <p class="price-value" id="resultPrice">—</p>
+          <p class="price-range">
+            <span id="resultMin">0</span> a <span id="resultMax">0</span> UF
+            <br>
+            <em>(Aproximadamente <span id="resultMinCLP">$0</span> a <span id="resultMaxCLP">$0</span>)</em>
+          </p>
+        </div>
+
+        <div class="result-disclaimer">
+          <strong>⚠️ Importante:</strong> Esta es una valorización algorítmica <strong>referencial</strong> basada en promedios de mercado de la Región de Ñuble. No es una tasación comercial ni legal. Para operaciones inmobiliarias, herencias, refinanciamientos o litigios, requiere <strong>tasación comercial formal</strong> por profesional certificado (desde $220.000) o <strong>peritaje judicial</strong> (desde $350.000).
+        </div>
+
+        <div class="result-actions">
+          <button type="button" class="btn-download" onclick="descargarPDF()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:20px;height:20px;">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+            </svg>
+            Descargar Informe (PDF)
+          </button>
+          <button type="button" class="btn-consultar" onclick="abrirWhatsAppConValor()" id="btnConsultarExperto">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:20px;height:20px;">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.561 4.14 1.535 5.872L0 24l6.322-1.506A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.93 0-3.73-.497-5.29-1.367l-.378-.22-3.754.894.924-3.648-.246-.394A9.952 9.952 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+            </svg>
+            Consultar a un Experto
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="section section--cream">
+  <div class="container">
+    <div class="cta-banner">
+      <div class="cta-banner__text">
+        <h2>¿Necesitas validación profesional?</h2>
+        <p>Nuestro equipo puede confirmar tu tasación con una valorización comercial certificada. También ofrecemos due diligence integral si estás considerando una compra o inversión.</p>
+      </div>
+      <div class="cta-banner__actions">
+        <a href="https://wa.me/56938689157?text=Hola%20Carlos,%20después%20de%20la%20tasación%20gratis%20quiero%20hablar%20sobre%20servicios%20profesionales." class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:20px;height:20px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.561 4.14 1.535 5.872L0 24l6.322-1.506A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.93 0-3.73-.497-5.29-1.367l-.378-.22-3.754.894.924-3.648-.246-.394A9.952 9.952 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          Triage Inicial Gratuito
+        </a>
+        <a href="tasacion-comercial.html" class="btn btn-outline-gold">Ver Tasación Comercial</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand">CVR Consultoría Técnica <span>Predial e Inmobiliaria</span></div>
+        <p class="footer__desc">Especialistas en gestión de riesgo patrimonial predial en la Región de Ñuble. 21 años protegiendo activos inmobiliarios con independencia y rigor técnico.</p>
+      </div>
+      <div>
+        <div class="footer__title">Servicios</div>
+        <ul class="footer__links">
+          <li><a href="due-diligence.html">Due Diligence Predial</a></li>
+          <li><a href="paquete-hereditario.html">Paquete Hereditario</a></li>
+          <li><a href="matriz-riesgo-hidrico.html">Matriz de Riesgo Hídrico</a></li>
+          <li><a href="peritaje-judicial.html">Peritaje Judicial</a></li>
+          <li><a href="tasacion-comercial.html">Tasación Comercial</a></li>
+          <li><a href="estudio-titulos.html">Estudio de Títulos</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__title">Contacto</div>
+        <div class="footer__contact">
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            Chillán, Región de Ñuble, Chile
+          </div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <a href="mailto:contacto@cvrpropiedades.com">contacto@cvrpropiedades.com</a>
+          </div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
+            <a href="https://wa.me/56938689157" target="_blank" rel="noopener">+56 9 3868 9157</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2025 CVR Consultoría Técnica. Todos los derechos reservados.</span>
+      <span>Chillán · Región de Ñuble · Chile</span>
+    </div>
+  </div>
+</footer>
+
+<!-- BOTÓN FLOTANTE WHATSAPP -->
+<a href="https://wa.me/56938689157?text=Hola%20Carlos,%20vengo%20de%20la%20web%20y%20quiero%20validar%20mi%20tasación." class="whatsapp-float" title="Consultar por WhatsApp" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" fill="currentColor">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.561 4.14 1.535 5.872L0 24l6.322-1.506A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.93 0-3.73-.497-5.29-1.367l-.378-.22-3.754.894.924-3.648-.246-.394A9.952 9.952 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+  </svg>
+</a>
+
+<script>
+  // ========================================
+  // VARIABLES EDITABLES - ACTUALIZAR MENSUALMENTE
+  // ========================================
+  const UF_TO_CLP = 37500; // Actualizar este valor cada mes según el UF oficial
+  // Fuente: Banco Central de Chile (www.bcentral.cl)
+
+  // ========================================
+  // LÓGICA DEL FORMULARIO INTERACTIVO
+  // ========================================
+
+  let currentStep = 1;
+  const totalSteps = 3;
+
+  // Promedios de precios en UF por m² en Ñuble (datos referenciales 2025)
+  const preciosPromedio = {
+    urbana: { min: 25, max: 45 }, // UF por m² construido
+    rural: { min: 15, max: 35 }   // UF por m² total
+  };
+
+  function nextStep(step) {
+    const form = document.getElementById('mainForm');
+    const currentForm = form.querySelector(`.form-step[data-step="${step}"]`);
+
+    // Validar campos del paso actual
+    if (!currentForm.querySelector('input:invalid') && currentForm.checkValidity()) {
+      currentStep++;
+      updateFormDisplay();
+    } else {
+      alert('Por favor completa todos los campos requeridos.');
+      currentForm.reportValidity();
+    }
+  }
+
+  function prevStep(step) {
+    currentStep--;
+    updateFormDisplay();
+  }
+
+  function updateFormDisplay() {
+    const steps = document.querySelectorAll('.form-step');
+    steps.forEach(step => step.classList.remove('active'));
+    document.querySelector(`.form-step[data-step="${currentStep}"]`).classList.add('active');
+
+    // Actualizar indicador de progreso
+    const dots = document.querySelectorAll('.progress-dot');
+    dots.forEach(dot => {
+      const step = parseInt(dot.dataset.step);
+      dot.classList.remove('active', 'completed');
+      if (step < currentStep) {
+        dot.classList.add('completed');
+      } else if (step === currentStep) {
+        dot.classList.add('active');
+      }
+    });
+
+    // Mostrar/ocultar botón anterior
+    const btnPrev = document.querySelector('.btn-form-prev');
+    if (currentStep > 1) {
+      btnPrev.style.display = 'block';
+    } else {
+      btnPrev.style.display = 'none';
+    }
+
+    // Cambiar texto del botón siguiente
+    const btnNext = document.querySelector('.btn-form-next');
+    if (currentStep === totalSteps) {
+      btnNext.textContent = 'Calcular Tasación';
+    } else {
+      btnNext.textContent = 'Siguiente →';
+    }
+  }
+
+  function calcularTasacion() {
+    const form = document.getElementById('mainForm');
+    if (!form.checkValidity()) {
+      alert('Por favor completa todos los campos.');
+      form.reportValidity();
+      return;
+    }
+
+    // Obtener datos del formulario
+    const formData = new FormData(form);
+    const datos = {
+      ubicacion: formData.get('ubicacion'),
+      tipo: formData.get('tipo'),
+      metrosTierra: parseInt(formData.get('metrosTierra')) || 0,
+      metrosConstruidos: parseInt(formData.get('metrosConstruidos')) || 0,
+      dormitorios: parseInt(formData.get('dormitorios')) || 0,
+      banos: parseInt(formData.get('banos')) || 0,
+      derechosAgua: formData.get('derechosAgua'),
+      regularizacion: formData.get('regularizacion'),
+      nombre: formData.get('nombre'),
+      email: formData.get('email'),
+      whatsapp: formData.get('whatsapp')
+    };
+
+    // Calcular valorización
+    let precioBase = preciosPromedio[datos.tipo].min;
+    let precioMax = preciosPromedio[datos.tipo].max;
+    let superficieBase = datos.tipo === 'urbana' ? datos.metrosConstruidos || 100 : datos.metrosTierra || 500;
+
+    // Ajustes por factores
+    let multiplicador = 1;
+
+    // Ajuste por derechos de agua (rural)
+    if (datos.tipo === 'rural') {
+      if (datos.derechosAgua === 'si') multiplicador += 0.15;      // +15% si están regularizados
+      if (datos.derechosAgua === 'no') multiplicador -= 0.1;       // -10% si no tiene
+      if (datos.derechosAgua === 'pendiente') multiplicador -= 0.12; // -12% si están sin formalizar
+    }
+
+    // Ajuste por regularización
+    if (datos.regularizacion === 'regularizado') multiplicador += 0.05;  // +5% si está regularizada
+    if (datos.regularizacion === 'pendiente') multiplicador -= 0.15;     // -15% si está pendiente
+    if (datos.regularizacion === 'litigioso') multiplicador -= 0.2;      // -20% si está en disputa
+
+    // Ajuste por tamaño (economías/deseconomías de escala)
+    if (superficieBase < 200 && datos.tipo === 'urbana') multiplicador += 0.1;
+    if (superficieBase > 2000 && datos.tipo === 'rural') multiplicador -= 0.05;
+
+    // Calcular rango
+    const valorMin = Math.round((precioBase * superficieBase * multiplicador) / 10) * 10;
+    const valorMax = Math.round((precioMax * superficieBase * multiplicador * 1.15) / 10) * 10;
+
+    // Convertir a CLP
+    const valorMinCLP = valorMin * UF_TO_CLP;
+    const valorMaxCLP = valorMax * UF_TO_CLP;
+
+    // Mostrar resultado
+    document.getElementById('resultPrice').textContent = `${valorMin.toLocaleString('es-CL')} - ${valorMax.toLocaleString('es-CL')} UF`;
+    document.getElementById('resultMin').textContent = valorMin.toLocaleString('es-CL');
+    document.getElementById('resultMax').textContent = valorMax.toLocaleString('es-CL');
+    document.getElementById('resultMinCLP').textContent = `$${(valorMinCLP / 1000000).toFixed(1)}M`;
+    document.getElementById('resultMaxCLP').textContent = `$${(valorMaxCLP / 1000000).toFixed(1)}M`;
+
+    // Ocultar formulario y mostrar resultado
+    document.getElementById('mainForm').style.display = 'none';
+    document.getElementById('tasacionResult').classList.add('show');
+
+    // Guardar datos para descarga de PDF
+    window.tasacionData = {
+      ...datos,
+      valorMin,
+      valorMax,
+      valorMinCLP,
+      valorMaxCLP,
+      fecha: new Date().toLocaleDateString('es-CL')
+    };
+
+    // Enviar datos a Netlify Forms (opcional)
+    if (navigator.sendBeacon) {
+      const formDataToSend = new FormData();
+      Object.keys(window.tasacionData).forEach(key => {
+        formDataToSend.append(key, window.tasacionData[key]);
+      });
+      formDataToSend.append('_gotcha', ''); // Honey pot anti-spam
+    }
+  }
+
+  function descargarPDF() {
+    if (!window.tasacionData) return;
+
+    const d = window.tasacionData;
+    const contenido = `
+INFORME DE TASACIÓN REFERENCIAL
+CVR Consultoría Técnica Predial
+=====================================
+
+FECHA: ${d.fecha}
+SOLICITANTE: ${d.nombre}
+EMAIL: ${d.email}
+WHATSAPP: ${d.whatsapp}
+
+=====================================
+DATOS DE LA PROPIEDAD
+=====================================
+Ubicación: ${d.ubicacion}
+Tipo: ${d.tipo === 'urbana' ? 'Urbana' : 'Rural'}
+Metros de Terreno: ${d.metrosTierra} m²
+Metros Construidos: ${d.metrosConstruidos} m²
+Dormitorios: ${d.dormitorios}
+Baños: ${d.banos}
+Derechos de Agua: ${d.derechosAgua === 'si' ? 'Sí, regularizados' : d.derechosAgua === 'no' ? 'No tiene' : 'Sin formalizar'}
+Estado de Regularización: ${d.regularizacion === 'regularizado' ? 'Regularizado' : d.regularizacion === 'pendiente' ? 'Pendiente' : 'En disputa'}
+
+=====================================
+RESULTADO DE TASACIÓN
+=====================================
+Rango de Valor Estimado:
+  ${d.valorMin.toLocaleString('es-CL')} - ${d.valorMax.toLocaleString('es-CL')} UF
+
+En Pesos Chilenos (aproximado):
+  $${(d.valorMinCLP / 1000000).toFixed(1)}M - $${(d.valorMaxCLP / 1000000).toFixed(1)}M
+
+UF referencial utilizada: $${UF_TO_CLP.toLocaleString('es-CL')}
+
+=====================================
+ADVERTENCIA IMPORTANTE
+=====================================
+Esta es una VALORIZACIÓN ALGORÍTMICA REFERENCIAL basada en
+promedios de mercado de la Región de Ñuble. NO es una tasación
+comercial ni legal.
+
+Para operaciones inmobiliarias, herencias, refinanciamientos o
+litigios, se requiere TASACIÓN COMERCIAL FORMAL por profesional
+certificado.
+
+=====================================
+PRÓXIMOS PASOS
+=====================================
+1. Validar este resultado con una tasación comercial profesional
+2. Contactar a nuestro equipo: +56 9 3868 9157
+3. Cotizar servicios de tasación o due diligence
+
+CVR Consultoría Técnica Predial
+Chillán, Región de Ñuble, Chile
+contacto@cvrpropiedades.com
+    `;
+
+    // Crear blob y descargar
+    const blob = new Blob([contenido], { type: 'text/plain;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `Tasacion_Referencial_${d.nombre.replace(/\s+/g, '_')}_${new Date().getTime()}.txt`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+  }
+
+  function abrirWhatsAppConValor() {
+    if (!window.tasacionData) {
+      alert('Por favor calcula la tasación primero.');
+      return;
+    }
+
+    const d = window.tasacionData;
+    const mensaje = `Hola Carlos, obtuve una tasación de ${d.valorMin.toLocaleString('es-CL')} a ${d.valorMax.toLocaleString('es-CL')} UF (aprox. $${(d.valorMinCLP / 1000000).toFixed(1)}M a $${(d.valorMaxCLP / 1000000).toFixed(1)}M) en la web y quiero validarla con un experto.`;
+    const urlEncodedMsg = encodeURIComponent(mensaje);
+    const whatsappUrl = `https://wa.me/56938689157?text=${urlEncodedMsg}`;
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+  }
+
+  // Cerrar menú al hacer click
+  const toggle = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => links.classList.toggle('open'));
+  document.querySelectorAll('.nav__links a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+</script>
+
+</body>
+</html>

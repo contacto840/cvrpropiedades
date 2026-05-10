@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto — CVR Propiedades | Chillán, Región de Ñuble</title>
+  <meta name="description" content="Contacte a CVR Propiedades en Chillán, Región de Ñuble. Triage inicial gratuito de 15 minutos por WhatsApp. Consultoría técnica predial: due diligence, tasaciones, estudios de títulos." />
+  <meta name="keywords" content="contacto CVR Propiedades Chillán, consultoría predial Ñuble WhatsApp, triage predial gratuito Chile" />
+  <meta property="og:title" content="Contacto — CVR Propiedades" />
+  <meta property="og:description" content="Agende su triage inicial gratuito de 15 minutos. Atendemos por WhatsApp, correo y formulario de contacto. Chillán, Región de Ñuble." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cvrpropiedades.cl/contacto.html" />
+  <link rel="canonical" href="https://cvrpropiedades.cl/contacto.html" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    .contact-info-card {
+      background: var(--navy);
+      border-radius: 10px;
+      padding: 2.5rem;
+      color: var(--white);
+      position: sticky;
+      top: 84px;
+    }
+    .contact-info-card h3 {
+      color: var(--white);
+      margin-bottom: 0.4rem;
+    }
+    .contact-info-card .lead {
+      color: rgba(255,255,255,0.65);
+      font-size: 0.92rem;
+      margin-bottom: 2rem;
+    }
+    .contact-channel {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .contact-channel:last-of-type { border-bottom: none; }
+    .contact-channel__icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1.1rem;
+    }
+    .contact-channel__icon--wa  { background: rgba(37,211,102,0.15); }
+    .contact-channel__icon--mail{ background: rgba(201,168,76,0.12); }
+    .contact-channel__icon--loc { background: rgba(255,255,255,0.06); }
+    .contact-channel__label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.25rem;
+    }
+    .contact-channel__value {
+      font-size: 0.95rem;
+      color: var(--white);
+    }
+    .contact-channel__sub {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.5);
+      margin-top: 0.2rem;
+    }
+    .form-card {
+      background: var(--white);
+      border-radius: 10px;
+      padding: 2.5rem;
+      border: 1px solid var(--gray-lt);
+      box-shadow: 0 4px 24px rgba(26,46,74,0.07);
+    }
+    .form-card h3 { color: var(--navy); margin-bottom: 0.4rem; font-size: 1.4rem; }
+    .form-card .sub { font-size: 0.9rem; color: var(--gray); margin-bottom: 2rem; }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 2rem;
+    }
+    .form-success h4 { color: var(--navy); margin-bottom: 0.5rem; }
+    .form-success p  { color: var(--gray); font-size: 0.9rem; }
+    @media(max-width:768px){
+      .contact-grid { grid-template-columns:1fr; }
+      .contact-info-card { position: static; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">CVR Propiedades<span>Consultoría Técnica Predial</span></a>
+    <button class="nav__toggle" id="navToggle" aria-label="Menú"><span></span><span></span><span></span></button>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="due-diligence.html">Due Diligence</a></li>
+      <li><a href="estudio-titulos.html">Títulos</a></li>
+      <li><a href="tasacion-comercial.html">Tasaciones</a></li>
+      <li><a href="tasacion-gratis.html">Tasación Gratis</a></li>
+      <li><a href="contacto.html" class="active">Contacto</a></li>
+      <li><a href="https://wa.me/56938689157" class="nav__cta" target="_blank" rel="noopener">WhatsApp</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="service-hero">
+  <div class="container">
+    <div class="service-hero__inner">
+      <nav class="breadcrumb"><a href="index.html">Inicio</a><span class="breadcrumb__sep">/</span><span>Contacto</span></nav>
+      <span class="tag">Contacto</span>
+      <h1>Hablemos de su propiedad</h1>
+      <p>El primer paso es un triage inicial de 15 minutos, sin costo y sin compromiso. Cuéntenos su situación y le decimos directamente qué necesita y si CVR Propiedades es la consultora adecuada para su caso.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENIDO PRINCIPAL -->
+<section class="section section--cream">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- INFO LATERAL -->
+      <div>
+        <div class="contact-info-card">
+          <h3>Canales de contacto</h3>
+          <p class="lead">Respondemos consultas de lunes a viernes, 9:00–18:00 hrs. El canal más rápido es siempre WhatsApp.</p>
+
+          <div class="contact-channel">
+            <div class="contact-channel__icon contact-channel__icon--wa">💬</div>
+            <div>
+              <div class="contact-channel__label">WhatsApp (preferido)</div>
+              <div class="contact-channel__value">
+                <a href="https://wa.me/56938689157" target="_blank" rel="noopener" style="color:var(--gold);">+56 9 3868 9157</a>
+              </div>
+              <div class="contact-channel__sub">Triage inicial gratuito · 15 minutos · Sin compromiso</div>
+            </div>
+          </div>
+
+          <div class="contact-channel">
+            <div class="contact-channel__icon contact-channel__icon--mail">✉️</div>
+            <div>
+              <div class="contact-channel__label">Correo electrónico</div>
+              <div class="contact-channel__value">
+                <a href="mailto:contacto@cvrpropiedades.com" style="color:var(--gold);">contacto@cvrpropiedades.com</a>
+              </div>
+              <div class="contact-channel__sub">Para envío de documentos o consultas no urgentes</div>
+            </div>
+          </div>
+
+          <div class="contact-channel">
+            <div class="contact-channel__icon contact-channel__icon--loc">📍</div>
+            <div>
+              <div class="contact-channel__label">Ubicación</div>
+              <div class="contact-channel__value">Chillán, Región de Ñuble</div>
+              <div class="contact-channel__sub">Atención presencial con cita previa</div>
+            </div>
+          </div>
+
+          <div style="margin-top:2rem; padding:1.25rem; background:rgba(201,168,76,0.08); border:1px solid rgba(201,168,76,0.2); border-radius:6px;">
+            <div style="font-size:0.78rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--gold); margin-bottom:0.5rem;">Horario de atención</div>
+            <div style="font-size:0.88rem; color:rgba(255,255,255,0.75); line-height:1.6;">
+              Lunes a Viernes: 9:00 — 18:00 hrs<br>
+              Sábados: Consultar disponibilidad<br>
+              Domingos y festivos: No disponible
+            </div>
+          </div>
+
+          <a href="https://wa.me/56938689157" class="btn btn-whatsapp" style="width:100%; justify-content:center; margin-top:1.75rem;" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.561 4.14 1.535 5.872L0 24l6.322-1.506A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.93 0-3.73-.497-5.29-1.367l-.378-.22-3.754.894.924-3.648-.246-.394A9.952 9.952 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            Abrir WhatsApp ahora
+          </a>
+        </div>
+      </div>
+
+      <!-- FORMULARIO -->
+      <div>
+        <div class="form-card">
+          <h3>Formulario de contacto</h3>
+          <p class="sub">Complete el formulario y le responderemos en un plazo máximo de 24 horas hábiles. Para una respuesta inmediata, use WhatsApp.</p>
+
+          <form id="contactForm" action="https://formspree.io/f/contacto@cvrpropiedades.com" method="POST" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nombre">Nombre completo *</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Su nombre" required />
+              </div>
+              <div class="form-group">
+                <label for="telefono">Teléfono / WhatsApp</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="+56 9 XXXX XXXX" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Correo electrónico *</label>
+              <input type="email" id="email" name="email" placeholder="su@correo.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="servicio">Servicio de interés</label>
+              <select id="servicio" name="servicio">
+                <option value="">— Seleccione un servicio —</option>
+                <option value="due-diligence">Due Diligence Predial</option>
+                <option value="paquete-hereditario">Paquete Hereditario</option>
+                <option value="matriz-hidrica">Matriz de Riesgo Hídrico (DGA)</option>
+                <option value="peritaje">Peritaje Judicial</option>
+                <option value="tasacion">Tasación Comercial</option>
+                <option value="estudio-titulos">Estudio de Títulos</option>
+                <option value="otro">Otro / No estoy seguro/a</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="mensaje">Describa brevemente su situación *</label>
+              <textarea id="mensaje" name="mensaje" placeholder="Ej: Estoy evaluando comprar un terreno de 5.000 m² en Las Trancas y quiero saber si los títulos están limpios y si tiene derechos de agua..." required></textarea>
+            </div>
+
+            <div class="form-group" style="display:flex; align-items:flex-start; gap:0.75rem;">
+              <input type="checkbox" id="acepta" name="acepta" required style="width:auto; margin-top:3px; flex-shrink:0;" />
+              <label for="acepta" style="font-size:0.82rem; color:var(--gray); font-weight:400; cursor:pointer;">Acepto que CVR Propiedades utilice los datos de este formulario para contactarme. No se comparten con terceros.</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; margin-top:0.5rem;">
+              Enviar consulta
+            </button>
+            <p style="font-size:0.78rem; color:var(--gray); text-align:center; margin-top:1rem;">
+              O contáctenos directamente por <a href="https://wa.me/56938689157" target="_blank" rel="noopener">WhatsApp</a> para una respuesta inmediata.
+            </p>
+          </form>
+
+          <div class="form-success" id="formSuccess">
+            <div style="font-size:2.5rem; margin-bottom:1rem;">✅</div>
+            <h4>Mensaje enviado correctamente</h4>
+            <p>Le responderemos dentro de las próximas 24 horas hábiles. Para una respuesta inmediata, puede contactarnos por <a href="https://wa.me/56938689157" target="_blank" rel="noopener">WhatsApp</a>.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MAPA CHILLÁN -->
+<section class="section section--white" style="padding-top:0;">
+  <div class="container">
+    <span class="tag">Ubicación</span>
+    <h2>Chillán, Región de Ñuble</h2>
+    <p style="color:var(--gray); margin-bottom:1.5rem; max-width:580px;">Atendemos presencialmente en Chillán con cita previa. También operamos en toda la Región de Ñuble para inspecciones en terreno.</p>
+    <div class="map-wrap" style="height:380px; border-radius:10px;">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49936.27!2d-72.1179!3d-36.6067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x966453f89d1d46a7%3A0x2b9c66d23f91fae5!2sChillan%2C+Biobio!5e0!3m2!1ses!2scl!4v1"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="CVR Propiedades — Chillán, Región de Ñuble">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- CTA WHATSAPP FINAL -->
+<section class="section section--cream">
+  <div class="container">
+    <div class="cta-banner">
+      <div class="cta-banner__text">
+        <h2>La vía más rápida: WhatsApp</h2>
+        <p>Agenda tu triage inicial de 15 minutos (sin costo) directamente en nuestro WhatsApp: <strong>wa.me/56938689157</strong>. Evaluamos su caso y le orientamos sin compromiso.</p>
+      </div>
+      <div class="cta-banner__actions">
+        <a href="https://wa.me/56938689157" class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:20px;height:20px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.561 4.14 1.535 5.872L0 24l6.322-1.506A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.93 0-3.73-.497-5.29-1.367l-.378-.22-3.754.894.924-3.648-.246-.394A9.952 9.952 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          Abrir WhatsApp
+        </a>
+        <a href="mailto:contacto@cvrpropiedades.com" class="btn btn-outline-gold">Enviar correo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand">CVR Propiedades <span>Consultoría Técnica Predial</span></div>
+        <p class="footer__desc">Especialistas en gestión de riesgo patrimonial predial en la Región de Ñuble. 21 años protegiendo activos inmobiliarios.</p>
+      </div>
+      <div>
+        <div class="footer__title">Servicios</div>
+        <ul class="footer__links">
+          <li><a href="due-diligence.html">Due Diligence Predial</a></li>
+          <li><a href="paquete-hereditario.html">Paquete Hereditario</a></li>
+          <li><a href="matriz-riesgo-hidrico.html">Matriz de Riesgo Hídrico</a></li>
+          <li><a href="peritaje-judicial.html">Peritaje Judicial</a></li>
+          <li><a href="tasacion-comercial.html">Tasación Comercial</a></li>
+          <li><a href="estudio-titulos.html">Estudio de Títulos</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__title">Contacto</div>
+        <div class="footer__contact">
+          <div class="footer__contact-item">📍 Chillán, Región de Ñuble, Chile</div>
+          <div class="footer__contact-item"><a href="mailto:contacto@cvrpropiedades.com">contacto@cvrpropiedades.com</a></div>
+          <div class="footer__contact-item"><a href="https://wa.me/56938689157" target="_blank" rel="noopener">+56 9 3868 9157</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2025 CVR Propiedades. Todos los derechos reservados.</span>
+      <span>Chillán · Región de Ñuble · Chile</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('navToggle').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('open'));
+
+  // Formulario: feedback visual en submit (Formspree o similar)
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]');
+    btn.textContent = 'Enviando…';
+    btn.disabled = true;
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        form.style.display = 'none';
+        document.getElementById('formSuccess').style.display = 'block';
+      } else {
+        btn.textContent = 'Error al enviar. Intente por WhatsApp.';
+        btn.disabled = false;
+      }
+    } catch {
+      btn.textContent = 'Error de red. Use WhatsApp.';
+      btn.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>
