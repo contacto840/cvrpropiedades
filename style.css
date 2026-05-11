@@ -1,21 +1,24 @@
 /* ============================================================================
-   CVRPROPIEDADES - Complete CSS Stylesheet
+   CVRPROPIEDADES - COMPLETE CLEAN & SPECIALIZED CSS
+   Diseño de Alto Estándar Técnico, Minimalista y Premium
    ============================================================================ */
 
-/* Root Variables & Global Styles */
+/* Importar Fuentes Especializadas de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&display=swap');
+
+/* Variables de Color (Tema: Azul Marino y Dorado Mate) */
 :root {
-  --navy: #1a2e4a;
-  --navy-mid: #2d4563;
+  --navy-dark: #0f1c30;  /* Más oscuro y formal */
+  --navy-mid: #1a2e4a;
   --gold: #d4af37;
-  --cream: #f5f1e8;
-  --text-dark: #333;
-  --text-light: #666;
-  --border-color: #ddd;
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.08);
-  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.12);
-  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.16);
+  --cream: #fbf9f4;    /* Crema más sutil, casi blanco */
+  --text-primary: #1a1a1a;
+  --text-secondary: #4d4d4d;
+  --border-color: #eaeaea;
+  --shadow-subtle: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
+/* Reset y Estilos Base */
 * {
   margin: 0;
   padding: 0;
@@ -24,72 +27,49 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 16px; /* Definir base */
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  line-height: 1.6;
-  color: var(--text-dark);
+  font-family: 'Inter', system-serif, sans-serif; /* Tipografía precisa */
   background-color: #fff;
+  color: var(--text-primary);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Typography */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
-  line-height: 1.2;
+/* Tipografía Especializada */
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', sans-serif; /* Títulos estructurados */
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--navy-dark);
   margin-bottom: 1rem;
 }
 
-h1 {
-  font-size: 3.5rem;
-}
-
-h2 {
-  font-size: 2.5rem;
-  color: var(--navy);
-}
-
-h3 {
-  font-size: 1.75rem;
-  color: var(--navy);
-}
-
-h4 {
-  font-size: 1.35rem;
-}
-
-h5 {
-  font-size: 1.1rem;
-}
-
-h6 {
-  font-size: 1rem;
-}
+h1 { font-size: 3rem; }
+h2 { font-size: 2.2rem; }
+h3 { font-size: 1.6rem; }
 
 p {
-  margin-bottom: 1rem;
-  color: var(--text-light);
-  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
 }
 
 a {
-  color: var(--gold);
+  color: inherit;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: all 0.2s ease-in-out;
 }
 
-a:hover {
-  color: #e6c200;
-}
-
-/* Navigation */
+/* Navegación (Sticky y Limpia) */
 .nav {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: var(--navy);
-  padding: 1rem 0;
-  box-shadow: var(--shadow-sm);
+  background-color: var(--navy-dark);
+  padding: 0.8rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .nav__inner {
@@ -102,632 +82,241 @@ a:hover {
 }
 
 .nav__logo {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 700;
-  color: var(--gold);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.nav__toggle {
-  display: none;
-  background: none;
-  border: none;
-  color: var(--cream);
-  font-size: 1.5rem;
-  cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .nav__links {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 1.8rem;
   align-items: center;
 }
 
 .nav__links a {
-  color: var(--cream);
-  font-size: 0.95rem;
+  color: #fff;
+  font-size: 0.9rem;
   font-weight: 500;
-  transition: color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .nav__links a:hover {
   color: var(--gold);
 }
 
+/* Botón de WhatsApp en la Nav - Sutil y Proporcionado */
 .nav__cta {
-  background-color: var(--gold);
-  color: var(--navy);
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
+  background-color: #fff; /* Fondo blanco */
+  color: var(--navy-dark);
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
   font-weight: 600;
-  transition: all 0.3s ease;
+  text-transform: uppercase;
+  border: 1px solid var(--border-color);
 }
 
 .nav__cta:hover {
-  background-color: #e6c200;
-  transform: translateY(-2px);
-}
-
-/* Hero Section */
-.hero {
-  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
-  color: var(--cream);
-  padding: 6rem 2rem;
-  text-align: center;
-}
-
-.hero__content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.hero__eyebrow {
-  font-size: 0.85rem;
-  color: var(--gold);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-
-.hero__title {
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-  line-height: 1.3;
-}
-
-.hero__desc {
-  font-size: 1.2rem;
-  margin-bottom: 2.5rem;
-  line-height: 1.8;
-  color: rgba(245, 241, 232, 0.9);
-}
-
-.hero__btns {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 3rem;
-}
-
-.hero__stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(245, 241, 232, 0.2);
-}
-
-.hero__stat {
-  text-align: center;
-}
-
-.hero__stat-number {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--gold);
-  margin-bottom: 0.5rem;
-}
-
-.hero__stat-label {
-  font-size: 0.95rem;
-  color: rgba(245, 241, 232, 0.8);
-}
-
-/* Buttons */
-.btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 4px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 1rem;
-  text-align: center;
-  text-decoration: none;
-}
-
-.btn-primary {
   background-color: var(--gold);
-  color: var(--navy);
+  color: #fff;
 }
 
-.btn-primary:hover {
-  background-color: #e6c200;
-  transform: translateY(-2px);
-}
-
-.btn-secondary {
-  background-color: var(--navy);
-  color: var(--cream);
-}
-
-.btn-secondary:hover {
-  background-color: var(--navy-mid);
-  transform: translateY(-2px);
-}
-
-.btn-outline {
-  background-color: transparent;
-  color: var(--cream);
-  border: 2px solid var(--cream);
-}
-
-.btn-outline:hover {
-  background-color: var(--cream);
-  color: var(--navy);
-}
-
-.btn-lg {
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
-}
-
-.btn-whatsapp {
-  background-color: #25d366;
-  color: white;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.btn-whatsapp:hover {
-  background-color: #20ba5a;
-}
-
-/* Sections */
+/* ==========================================================================
+   Secciones - Máximo Espaciado (Limpieza)
+   ========================================================================== */
 .section {
-  padding: 4rem 2rem;
+  padding: 8rem 2rem; /* El doble de "aire" */
   max-width: 1200px;
   margin: 0 auto;
-}
-
-.section-white {
-  background-color: #fff;
 }
 
 .section-cream {
   background-color: var(--cream);
 }
 
-.section-dark {
-  background-color: var(--navy);
-  color: var(--cream);
+.section-white {
+  background-color: #fff;
 }
 
-.section__title {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.section__subtitle {
-  font-size: 1.1rem;
-  color: var(--text-light);
-  margin-bottom: 3rem;
-  max-width: 600px;
-}
-
-/* Service Cards Grid */
-.grid-3 {
+/* ==========================================================================
+   Hero Section - Rediseño Minimalista (Img 2)
+   ========================================================================== */
+.hero {
+  background-color: var(--navy-mid);
+  color: #fff;
+  padding: 10rem 2rem 8rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-bottom: 3rem;
-}
-
-.service-card {
-  background-color: white;
-  border-radius: 8px;
-  padding: 2rem;
-  box-shadow: var(--shadow-md);
-  transition: all 0.3s ease;
-  border-left: 4px solid var(--gold);
-}
-
-.service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
-}
-
-.service-card__icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.service-card__title {
-  font-size: 1.35rem;
-  color: var(--navy);
-  margin-bottom: 0.75rem;
-}
-
-.service-card__desc {
-  color: var(--text-light);
-  line-height: 1.8;
-  margin-bottom: 1.5rem;
-}
-
-.service-card__link {
-  color: var(--gold);
-  font-weight: 600;
-  display: inline-flex;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
   align-items: center;
-  gap: 0.5rem;
-  transition: gap 0.3s ease;
 }
 
-.service-card__link:hover {
-  gap: 1rem;
+.hero__content {
+  text-align: left;
 }
 
-/* Why Choose Us Grid */
-.grid-2 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 3rem;
-  margin-bottom: 3rem;
-}
-
-.why-item {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.why-item__icon {
-  font-size: 2rem;
-  min-width: 40px;
-  color: var(--gold);
-}
-
-.why-item__content h4 {
-  color: var(--navy);
-  margin-bottom: 0.5rem;
-}
-
-/* Tags */
-.tag {
-  display: inline-block;
-  background-color: var(--gold);
-  color: var(--navy);
-  padding: 0.35rem 0.75rem;
-  border-radius: 20px;
+.hero__eyebrow {
   font-size: 0.8rem;
-  font-weight: 600;
-  margin-right: 0.5rem;
-  margin-bottom: 0.5rem;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.8rem;
 }
 
-/* Lead Text */
-.lead {
-  font-size: 1.25rem;
-  line-height: 1.8;
-  color: var(--text-light);
+.hero__title {
+  color: #fff;
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.hero__desc {
+  color: rgba(255,255,255,0.8);
+  font-size: 1.1rem;
   margin-bottom: 2rem;
+  max-width: 500px;
 }
 
-/* Steps */
-.steps {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin: 3rem 0;
+.hero__btns {
+  display: flex;
+  gap: 1.2rem;
 }
 
-.step {
-  text-align: center;
-  position: relative;
-}
-
-.step__number {
+/* Solución al Botón WhatsApp Gigante */
+.btn-whatsapp-rect {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 60px;
-  height: 60px;
-  background-color: var(--gold);
-  color: var(--navy);
-  border-radius: 50%;
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.step__title {
-  font-size: 1.1rem;
+  background-color: #25d366;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
   font-weight: 600;
-  color: var(--navy);
-  margin-bottom: 0.75rem;
-}
-
-.step__desc {
-  color: var(--text-light);
-  line-height: 1.6;
-}
-
-/* CTA Banner */
-.cta-banner {
-  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
-  color: var(--cream);
-  padding: 3rem 2rem;
+  gap: 0.5rem;
+  border: none;
+  font-size: 1rem;
+  min-width: 200px; /* Ancho consistente */
   text-align: center;
-  border-radius: 8px;
-  margin: 3rem 0;
 }
 
-.cta-banner__title {
-  font-size: 2rem;
+.btn-whatsapp-rect:hover {
+  background-color: #1ebe57;
+}
+
+/* El formulario de Tasación (Img 2) - Minimalista */
+.hero-form-box {
+  background-color: #fff;
+  padding: 3rem;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.hero-form-title {
+  color: var(--navy-dark);
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Formularios - Alta Legibilidad */
+.form-group { margin-bottom: 1.2rem; }
+
+label {
+  font-size: 0.85rem;
+  color: var(--navy-dark);
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+input[type="text"], input[type="tel"], select, textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: #333;
+  background-color: #fff; /* Fondo blanco siempre */
+}
+
+input[type="text"]:focus, select:focus {
+  border-color: var(--gold);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(212,175,55,0.1);
+}
+
+/* ==========================================================================
+   Servicios - Solución al Overlaid Graphics (Img 4-9)
+   ========================================================================== */
+
+/* ELIMINACIÓN DE LOS GRÁFICOS GIGANTES */
+.service-section, .duedil-section, .water-section, .hereditary-section, .judicial-section {
+  background-image: none !important; /* Eliminar cualquier gráfico de fondo de las secciones de servicio */
+  background-color: #fff;
+}
+
+/* Estilo Clean para Servicios */
+.grid-servicios {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.servicio-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tag-premium {
+  display: inline-block;
+  background-color: rgba(212,175,55,0.1);
+  color: var(--gold);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
   margin-bottom: 1rem;
 }
 
-.cta-banner__text {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-  color: rgba(245, 241, 232, 0.9);
-}
-
-/* Footer */
+/* ==========================================================================
+   Footer - Sobrio (Img 10)
+   ========================================================================= */
 .footer {
-  background-color: #0f1820;
-  color: rgba(245, 241, 232, 0.8);
-  padding: 3rem 2rem 2rem;
+  background-color: var(--navy-dark);
+  color: rgba(255,255,255,0.8);
+  padding: 6rem 2rem 3rem;
 }
 
 .footer__inner {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
-  margin-bottom: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
 }
 
 .footer__section h4 {
   color: var(--gold);
-  margin-bottom: 1rem;
-  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.footer__section ul {
-  list-style: none;
-}
-
-.footer__section ul li {
-  margin-bottom: 0.5rem;
-}
-
-.footer__section a {
-  color: rgba(245, 241, 232, 0.8);
-  transition: color 0.3s ease;
-}
-
-.footer__section a:hover {
-  color: var(--gold);
-}
+.footer__links li { margin-bottom: 0.6rem; }
+.footer__links a { color: rgba(255,255,255,0.8); }
+.footer__links a:hover { color: #fff; }
 
 .footer__bottom {
   text-align: center;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(245, 241, 232, 0.1);
-  font-size: 0.9rem;
-}
-
-/* Forms */
-form {
-  max-width: 600px;
-  margin: 2rem auto;
-}
-
-.form-group {
-  margin-bottom: 1.5rem;
-}
-
-label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-  color: var(--navy);
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid var(--border-color);
-  border-radius: 4px;
-  font-family: inherit;
-  font-size: 1rem;
-  transition: border-color 0.3s ease;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="tel"]:focus,
-textarea:focus {
-  outline: none;
-  border-color: var(--gold);
-  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
-}
-
-textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
-
-  h3 {
-    font-size: 1.5rem;
-  }
-
-  .hero__title {
-    font-size: 2rem;
-  }
-
-  .hero__desc {
-    font-size: 1rem;
-  }
-
-  .hero__btns {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .btn,
-  .btn-lg {
-    width: 100%;
-    max-width: 300px;
-  }
-
-  .nav__links {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    background-color: var(--navy);
-    padding: 2rem;
-    gap: 1rem;
-    box-shadow: var(--shadow-md);
-  }
-
-  .nav__links.active {
-    display: flex;
-  }
-
-  .nav__toggle {
-    display: block;
-  }
-
-  .section {
-    padding: 3rem 1rem;
-  }
-
-  .section__title {
-    font-size: 2rem;
-  }
-
-  .grid-3 {
-    grid-template-columns: 1fr;
-  }
-
-  .grid-2 {
-    grid-template-columns: 1fr;
-  }
-
-  .hero__stats {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
-
-  .steps {
-    grid-template-columns: 1fr;
-  }
-
-  .footer__inner {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .footer__section a {
-    display: inline-block;
-    margin-right: 1rem;
-  }
-
-  .cta-banner__title {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  h3 {
-    font-size: 1.25rem;
-  }
-
-  .hero {
-    padding: 3rem 1rem;
-  }
-
-  .hero__title {
-    font-size: 1.5rem;
-  }
-
-  .hero__desc {
-    font-size: 0.95rem;
-  }
-
-  .nav__inner {
-    padding: 0 1rem;
-  }
-
-  .nav__links {
-    padding: 1.5rem;
-  }
-
-  .hero__stats {
-    grid-template-columns: 1fr;
-  }
-
-  .hero__stat-number {
-    font-size: 2rem;
-  }
-
-  .section {
-    padding: 2rem 1rem;
-  }
-
-  .section__title {
-    font-size: 1.5rem;
-  }
-
-  .btn,
-  .btn-lg {
-    padding: 0.65rem 1.25rem;
-    font-size: 0.95rem;
-  }
-
-  .lead {
-    font-size: 1.1rem;
-  }
-
-  .step__number {
-    width: 50px;
-    height: 50px;
-    font-size: 1.25rem;
-  }
-
-  .cta-banner {
-    padding: 2rem 1rem;
-  }
-
-  .cta-banner__title {
-    font-size: 1.25rem;
-  }
-
-  .footer__inner {
-    gap: 1.5rem;
-  }
+  padding-top: 3rem;
+  margin-top: 3rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 0.85rem;
 }
