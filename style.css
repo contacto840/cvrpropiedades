@@ -1,322 +1,215 @@
 /* ============================================================================
-   CVRPROPIEDADES - COMPLETE CLEAN & SPECIALIZED CSS
-   Diseño de Alto Estándar Técnico, Minimalista y Premium
+   CVRPROPIEDADES - DISEÑO TÉCNICO PREMIUM (ESTILO CLAUDE CORREGIDO)
+   Paleta: Navy, Gold, Cream | Estilo: Técnico, Limpio y Especializado
    ============================================================================ */
 
-/* Importar Fuentes Especializadas de Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&display=swap');
+/* Tipografía de sistema (Carga rápido y se ve ultra profesional/técnica) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap');
 
-/* Variables de Color (Tema: Azul Marino y Dorado Mate) */
 :root {
-  --navy-dark: #0f1c30;  /* Más oscuro y formal */
-  --navy-mid: #1a2e4a;
+  /* Los colores originales de Claude (Premium) */
+  --navy: #1a2e4a;
+  --navy-mid: #2d4563;
   --gold: #d4af37;
-  --cream: #fbf9f4;    /* Crema más sutil, casi blanco */
-  --text-primary: #1a1a1a;
-  --text-secondary: #4d4d4d;
-  --border-color: #eaeaea;
-  --shadow-subtle: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --cream: #f5f1e8;
+  --text-dark: #2b2b2b;
+  --text-light: #555555;
+  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 10px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* Reset y Estilos Base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-  font-size: 16px; /* Definir base */
-}
-
 body {
-  font-family: 'Inter', system-serif, sans-serif; /* Tipografía precisa */
-  background-color: #fff;
-  color: var(--text-primary);
-  line-height: 1.8;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text-dark);
+  background-color: var(--cream); /* Fondo crema elegante */
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Tipografía Especializada */
+/* Tipografía Estructurada */
 h1, h2, h3, h4 {
-  font-family: 'Montserrat', sans-serif; /* Títulos estructurados */
-  font-weight: 700;
-  letter-spacing: -0.5px;
-  color: var(--navy-dark);
+  font-family: 'Playfair Display', serif; /* Letra de títulos más formal y legal */
+  color: var(--navy);
   margin-bottom: 1rem;
+  line-height: 1.3;
 }
 
-h1 { font-size: 3rem; }
-h2 { font-size: 2.2rem; }
-h3 { font-size: 1.6rem; }
-
-p {
-  margin-bottom: 1.5rem;
-  color: var(--text-secondary);
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-}
-
-/* Navegación (Sticky y Limpia) */
+/* ==========================================================================
+   NAVEGACIÓN (Ordenada y proporcionada)
+   ========================================================================== */
 .nav {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background-color: var(--navy-dark);
-  padding: 0.8rem 0;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background-color: var(--navy);
+  padding: 1rem 5%;
+  border-bottom: 3px solid var(--gold);
 }
 
 .nav__inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* Evita que se rompa en celulares */
 }
 
 .nav__logo {
-  font-size: 1.3rem;
+  color: var(--gold);
+  font-size: 1.4rem;
   font-weight: 700;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 5px;
 }
 
 .nav__links {
   display: flex;
+  gap: 1.5rem;
   list-style: none;
-  gap: 1.8rem;
-  align-items: center;
+  flex-wrap: wrap;
 }
 
 .nav__links a {
   color: #fff;
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: 0.85rem;
+  text-decoration: none;
+  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
+  transition: color 0.3s;
 }
 
 .nav__links a:hover {
   color: var(--gold);
 }
 
-/* Botón de WhatsApp en la Nav - Sutil y Proporcionado */
-.nav__cta {
-  background-color: #fff; /* Fondo blanco */
-  color: var(--navy-dark);
-  padding: 0.6rem 1.2rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  border: 1px solid var(--border-color);
-}
-
-.nav__cta:hover {
-  background-color: var(--gold);
-  color: #fff;
-}
-
 /* ==========================================================================
-   Secciones - Máximo Espaciado (Limpieza)
+   SOLUCIÓN MAESTRA A LOS ÍCONOS GIGANTES (TAMAÑO PREMIUM)
    ========================================================================== */
-.section {
-  padding: 8rem 2rem; /* El doble de "aire" */
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.section-cream {
-  background-color: var(--cream);
-}
-
-.section-white {
-  background-color: #fff;
-}
-
-/* ==========================================================================
-   Hero Section - Rediseño Minimalista (Img 2)
-   ========================================================================== */
-.hero {
-  background-color: var(--navy-mid);
-  color: #fff;
-  padding: 10rem 2rem 8rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
-}
-
-.hero__content {
-  text-align: left;
-}
-
-.hero__eyebrow {
-  font-size: 0.8rem;
-  color: var(--gold);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 0.8rem;
-}
-
-.hero__title {
-  color: #fff;
-  font-size: 3rem;
-  line-height: 1.2;
-}
-
-.hero__desc {
-  color: rgba(255,255,255,0.8);
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-  max-width: 500px;
-}
-
-.hero__btns {
-  display: flex;
-  gap: 1.2rem;
-}
-
-/* Solución al Botón WhatsApp Gigante */
-.btn-whatsapp-rect {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #25d366;
-  color: #fff;
-  padding: 0.8rem 2rem;
-  border-radius: 4px;
-  font-weight: 600;
-  gap: 0.5rem;
-  border: none;
-  font-size: 1rem;
-  min-width: 200px; /* Ancho consistente */
-  text-align: center;
-}
-
-.btn-whatsapp-rect:hover {
-  background-color: #1ebe57;
-}
-
-/* El formulario de Tasación (Img 2) - Minimalista */
-.hero-form-box {
-  background-color: #fff;
-  padding: 3rem;
-  border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-}
-
-.hero-form-title {
-  color: var(--navy-dark);
-  font-size: 1.4rem;
+/* Esto atrapa CUALQUIER SVG o imagen dentro de las secciones y lo hace pequeño y dorado */
+section svg, 
+main svg, 
+.servicio-content svg, 
+.section svg,
+.grid svg {
+  width: 48px !important;    /* Tamaño exacto, profesional */
+  height: 48px !important;
+  max-width: 48px !important;
   margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-/* Formularios - Alta Legibilidad */
-.form-group { margin-bottom: 1.2rem; }
-
-label {
-  font-size: 0.85rem;
-  color: var(--navy-dark);
-  margin-bottom: 0.4rem;
+  color: var(--gold) !important;
+  fill: var(--gold) !important; /* Los tiñe de dorado */
   display: block;
 }
 
-input[type="text"], input[type="tel"], select, textarea {
-  width: 100%;
-  padding: 0.9rem 1rem;
-  border: 1px solid var(--border-color);
-  border-radius: 4px;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.95rem;
-  color: #333;
-  background-color: #fff; /* Fondo blanco siempre */
+/* ==========================================================================
+   HERO Y SECCIONES
+   ========================================================================== */
+.hero {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+  color: var(--cream);
+  padding: 6rem 5%;
+  text-align: center;
 }
 
-input[type="text"]:focus, select:focus {
-  border-color: var(--gold);
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(212,175,55,0.1);
+.hero h1 {
+  color: var(--gold);
+  font-size: 3rem;
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+}
+
+.hero p {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 300;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  opacity: 0.9;
+}
+
+/* Cajas de Formulario y Servicios (Estilo Tarjeta de Alto Valor) */
+.hero-form-box, .servicio-content {
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 6px;
+  box-shadow: var(--shadow-md);
+  border-top: 4px solid var(--gold); /* Detalle corporativo arriba */
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.servicio-content h3 {
+  font-size: 1.6rem;
+}
+
+.servicio-content p {
+  font-size: 1rem;
+  color: var(--text-light);
 }
 
 /* ==========================================================================
-   Servicios - Solución al Overlaid Graphics (Img 4-9)
+   FORMULARIOS Y BOTONES
    ========================================================================== */
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 1rem;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  font-family: 'Inter', sans-serif;
+  background-color: #fafafa;
+  color: var(--text-dark);
+}
 
-/* ELIMINACIÓN DE LOS GRÁFICOS GIGANTES */
-.service-section, .duedil-section, .water-section, .hereditary-section, .judicial-section {
-  background-image: none !important; /* Eliminar cualquier gráfico de fondo de las secciones de servicio */
+input:focus, select:focus {
+  border-color: var(--gold);
+  outline: none;
   background-color: #fff;
 }
 
-/* Estilo Clean para Servicios */
-.grid-servicios {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-}
-
-.servicio-content {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.tag-premium {
+.btn-whatsapp-rect, button[type="submit"], .btn-primary {
   display: inline-block;
-  background-color: rgba(212,175,55,0.1);
-  color: var(--gold);
-  padding: 0.3rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.75rem;
+  background-color: var(--gold);
+  color: var(--navy);
+  padding: 0.8rem 2rem;
+  font-family: 'Inter', sans-serif;
   font-weight: 600;
+  font-size: 1rem;
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn-whatsapp-rect:hover, button[type="submit"]:hover {
+  background-color: #c4a133;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
 }
 
 /* ==========================================================================
-   Footer - Sobrio (Img 10)
-   ========================================================================= */
-.footer {
-  background-color: var(--navy-dark);
-  color: rgba(255,255,255,0.8);
-  padding: 6rem 2rem 3rem;
-}
-
-.footer__inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
-}
-
-.footer__section h4 {
-  color: var(--gold);
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 0.95rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.footer__links li { margin-bottom: 0.6rem; }
-.footer__links a { color: rgba(255,255,255,0.8); }
-.footer__links a:hover { color: #fff; }
-
-.footer__bottom {
-  text-align: center;
-  padding-top: 3rem;
-  margin-top: 3rem;
-  border-top: 1px solid rgba(255,255,255,0.1);
-  font-size: 0.85rem;
+   DISEÑO RESPONSIVO (MÓVILES)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .nav { padding: 1rem; }
+  
+  .nav__inner { flex-direction: column; text-align: center; gap: 1rem; }
+  
+  .nav__links { justify-content: center; gap: 0.8rem; }
+  
+  .nav__links a { font-size: 0.75rem; }
+  
+  .hero { padding: 4rem 1.5rem; }
+  
+  .hero h1 { font-size: 2.2rem; }
+  
+  .hero-form-box, .servicio-content { padding: 1.5rem; }
 }
